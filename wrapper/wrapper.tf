@@ -3,7 +3,7 @@ data "terraform_remote_state" "core" {
 
     config = {
         bucket = "${var.s3_bucket}"
-        key = "terraform-aws/terraform.tfstate"
+        key = "dev/us-east-1/PaaS/Core/terraform.tfstate"
         region = "us-east-1"
     }
 }

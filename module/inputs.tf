@@ -30,10 +30,10 @@ variable "key_pair" {
     default = ""
 }
 
-variable "gitlab_fargate_mgr_instance_type" {
+variable "kube_master_instance_type" {
   default = "t2.micro"
 }
 
-variable "fargate_gitlab_mgr_ami" {
+variable "kube_master_ami" {
   default = "ami-0ac80df6eff0e70b5"
 }

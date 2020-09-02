@@ -1,10 +1,10 @@
-resource "aws_iam_instance_profile" "fargate_mgr_instance_profile" {
-  name = "fargate_mgr_profile"
-  role = "${aws_iam_role.fargate_mgr_role.name}"
+resource "aws_iam_instance_profile" "kube_master_instance_profile" {
+  name = "kube_master_profile"
+  role = "${aws_iam_role.kube_master_role.name}"
 }
 
-resource "aws_iam_role" "fargate_mgr_role" {
-  name = "fargate_gitlab_manager"
+resource "aws_iam_role" "kube_master_role" {
+  name = "kube_master_role"
   path = "/"
 
   assume_role_policy = <<EOF

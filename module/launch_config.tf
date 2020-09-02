@@ -1,10 +1,10 @@
-resource "aws_launch_configuration" "fargate_mgr_lc" {
-  name_prefix          = "fargate_mgr_lc-"
-  image_id             = "${var.fargate_gitlab_mgr_ami}"
-  instance_type        = "${var.gitlab_fargate_mgr_instance_type}"
-  iam_instance_profile = "${aws_iam_instance_profile.fargate_mgr_instance_profile.id}"
+resource "aws_launch_configuration" "kube_master_lc" {
+  name_prefix          = "kube_master_lc-"
+  image_id             = "${var.kube_master_ami}"
+  instance_type        = "${var.kube_master_instance_type}"
+  iam_instance_profile = "${aws_iam_instance_profile.kube_master_instance_profile.id}"
   key_name             = "${var.key_pair}"
-  user_data            = "${data.template_file.user-init-fargate-mgr.rendered}"
+  user_data            = "${data.template_file.user-init-kube-master.rendered}"
   security_groups      = ["${var.kube_sg_id}", ]
 
   lifecycle {

@@ -1,5 +1,5 @@
-data "template_file" "user-init-fargate-mgr" {
-  template = "${file("${path.module}/files/userdata_fargate_mgr.tpl")}"
+data "template_file" "user-init-kube-master" {
+  template = "${file("${path.module}/files/userdata_kube_master.tpl")}"
 }
 
 data "aws_iam_policy" "ssm_role_policy" {

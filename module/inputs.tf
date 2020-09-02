@@ -14,7 +14,9 @@ variable "vpc_id" {
   default = ""
 }
 
-variable "s3_bucket" {}
+variable "s3_bucket" {
+    default = ""
+}
 
 variable "public_subnet_id" {
     default = ""

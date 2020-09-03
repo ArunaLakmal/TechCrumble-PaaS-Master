@@ -1,8 +1,12 @@
 variable "aws_region" {}
 
-variable "env" {}
+variable "env" {
+  default = ""
+}
 
-variable "paas_name" {}
+variable "paas_name" {
+  default = ""
+}
 
 variable "aws_profile" {}
 

@@ -1,5 +1,9 @@
 variable "aws_region" {}
 
+variable "env" {}
+
+variable "paas_name" {}
+
 variable "aws_profile" {}
 
 variable "ssm_role_policy" {

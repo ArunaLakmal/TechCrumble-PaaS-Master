@@ -18,4 +18,5 @@ module "mod" {
 
     aws_region = "${var.aws_region}"
     aws_profile = "${var.aws_profile}"
+    master_desired_capacity = "${var.master_desired_capacity}"
 }

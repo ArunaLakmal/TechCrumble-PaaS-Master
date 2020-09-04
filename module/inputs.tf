@@ -46,7 +46,9 @@ variable "kube_master_ami" {
   default = "ami-0ac80df6eff0e70b5"
 }
 
-variable "master_desired_capacity" {}
+variable "master_desired_capacity" {
+  default = 1
+}
 
 variable "kube_master_version" {
   default = "v0.0"

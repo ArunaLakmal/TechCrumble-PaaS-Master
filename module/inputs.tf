@@ -45,3 +45,11 @@ variable "kube_master_instance_type" {
 variable "kube_master_ami" {
   default = "ami-0ac80df6eff0e70b5"
 }
+
+variable "desired_capacity" {
+  default = 1
+}
+
+variable "kube_master_version" {
+  default = "v0.0"
+}

@@ -4,7 +4,7 @@ resource "aws_autoscaling_group" "kube_master_asg" {
   min_size                  = 1
   health_check_grace_period = 300
   health_check_type         = "EC2"
-  desired_capacity          = 1
+  desired_capacity          = "${var.master_desired_capacity}"
   force_delete              = true
   launch_configuration      = "${aws_launch_configuration.kube_master_lc.id}"
 

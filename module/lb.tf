@@ -15,7 +15,7 @@ resource "aws_lb_target_group" "int_kube_master_tg" {
   name     = "int-kube-master-tg"
   port     = 80
   protocol = "TCP"
-  vpc_id   = "${var.vpc_id.id}"
+  vpc_id   = "${var.vpc_id}"
 }
 
 resource "aws_lb_listener" "int_kube_master_listener" {

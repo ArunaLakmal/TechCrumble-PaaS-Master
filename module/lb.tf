@@ -20,7 +20,7 @@ resource "aws_lb_target_group" "int_kube_master_tg" {
 
 resource "aws_lb_listener" "int_kube_master_listener" {
     load_balancer_arn = "${aws_lb.int_kube_master_lb.arn}"
-    tcp = "80"
+    port = "80"
     protocol = "TCP"
 
     default_action {

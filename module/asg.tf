@@ -9,7 +9,7 @@ resource "aws_autoscaling_group" "kube_master_asg" {
   launch_configuration      = "${aws_launch_configuration.kube_master_lc.id}"
 
   vpc_zone_identifier = ["${var.private_subnet1}",
-  ]
+  "${var.private_subnet2}"]
   
 lifecycle {
     create_before_destroy = true

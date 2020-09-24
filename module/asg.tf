@@ -8,7 +8,7 @@ resource "aws_autoscaling_group" "kube_master_asg" {
   force_delete              = true
   launch_configuration      = "${aws_launch_configuration.kube_master_lc.id}"
 
-  vpc_zone_identifier = ["${var.public_subnet_id}",
+  vpc_zone_identifier = ["${var.private_subnet1}",
   ]
   
 lifecycle {

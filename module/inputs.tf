@@ -26,11 +26,19 @@ variable "s3_bucket" {
     default = ""
 }
 
-variable "public_subnet_id" {
+variable "public_subnet_id1" {
     default = ""
 }
 
+variable "public_subnet_id2" {
+  default = ""
+}
+
 variable "private_subnet1" {
+  default = ""
+}
+
+variable "private_subnet2" {
   default = ""
 }
 

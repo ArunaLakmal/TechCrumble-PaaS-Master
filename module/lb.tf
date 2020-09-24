@@ -2,7 +2,7 @@ resource "aws_lb" "int_kube_master_lb" {
   name               = "kubemaster-int-lb"
   internal           = true
   load_balancer_type = "network"
-  subnets            = ["${var.private_subnet1.id}"]
+  subnets            = ["${var.private_subnet1}"]
 
   enable_deletion_protection = false
 

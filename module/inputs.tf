@@ -30,6 +30,10 @@ variable "public_subnet_id" {
     default = ""
 }
 
+variable "private_subnet1" {
+  default = ""
+}
+
 variable "kube_sg_id" {
     default = ""
 }

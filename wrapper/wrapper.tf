@@ -14,7 +14,8 @@ module "mod" {
     vpc_id = "${var.vpc_id != "" ? var.vpc_id : data.terraform_remote_state.core.outputs.vpc_id}"
     public_subnet_id = "${var.public_subnet_id != "" ? var.public_subnet_id : data.terraform_remote_state.core.outputs.public_subnet_id}"
     kube_sg_id = "${var.kube_sg_id != "" ? var.kube_sg_id : data.terraform_remote_state.core.outputs.kube_sg_id}"
-    key_pair = "${var.kube_sg_id != "" ? var.kube_sg_id : data.terraform_remote_state.core.outputs.key_pair}"
+    key_pair = "${var.key_pair != "" ? var.key_pair : data.terraform_remote_state.core.outputs.key_pair}"
+    private_subnet1 = "${var.private_subnet1 !="" ? var.private_subnet1 : data.terraform_remote_state.core.outputs.private_subnet_id1}"
 
     aws_region = "${var.aws_region}"
     aws_profile = "${var.aws_profile}"

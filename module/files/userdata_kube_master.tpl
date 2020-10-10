@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo yum -y update
-sudo yum -y install git jq make python3 python3-distutils
+sudo apt -y update
+sudo apt install -y git jq make python3 python3-distutils
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
 python3 get-pip.py 
 pip install botocore boto boto3 ansible awscli

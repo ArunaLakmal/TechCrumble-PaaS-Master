@@ -71,3 +71,15 @@ resource "aws_autoscaling_attachment" "int_lb-kube_master_attachment" {
   alb_target_group_arn = "${aws_lb_target_group.int_kube_master_tg.id}"
   depends_on = [aws_lb.int_kube_master_lb] 
 }
+
+resource "aws_autoscaling_attachment" "int_lb-kube_master_attachment_6443" {
+  autoscaling_group_name = "${aws_autoscaling_group.kube_master_asg.id}"
+  alb_target_group_arn = "${aws_lb_target_group.int_kube_master_6443.id}"
+  depends_on = [aws_lb.int_kube_master_lb] 
+}
+
+resource "aws_autoscaling_attachment" "int_lb-kube_master_attachment_443" {
+  autoscaling_group_name = "${aws_autoscaling_group.kube_master_asg.id}"
+  alb_target_group_arn = "${aws_lb_target_group.int_kube_master_443.id}"
+  depends_on = [aws_lb.int_kube_master_lb] 
+}

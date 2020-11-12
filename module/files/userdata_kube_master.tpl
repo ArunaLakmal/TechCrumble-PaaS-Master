@@ -3,8 +3,9 @@ sudo apt -y update
 sudo apt install -y git jq make python3 python3-distutils
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
 python3 get-pip.py 
-pip install botocore boto boto3 ansible awscli
+pip install botocore boto boto3 ansible awscli openshift
 ansible-galaxy collection install community.aws
+ansible-galaxy collection install community.kubernetes
 
 wget -P /usr/local/bin/ https://docs.techcrumble.net/cluster/ansible-wrapper.sh
 wget -P /etc/systemd/system/ https://docs.techcrumble.net/cluster/techcrumble.service
